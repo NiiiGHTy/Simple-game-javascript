@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container" id="myContainer">
+        <button id="musicPlayer" class="musicPlayer"><i class="uil uil-music"></i></button>
+        <div class="game-card"> 
+
+
+            <div class="gamer-card monster-card">
+
+                <div class="img-container">
+                    <img src="monster.png" alt="">
+                </div>
+
+                <progress id="monster-health" max="100" value="100"></progress>
+
+            </div>
+
+
+
+            <div class="gamer-card player-card">
+                
+                <div class="img-container">
+                    <img id="steve" src="player.png" alt="">
+                </div>
+
+                <progress id="player-health" max="100" value="100"></progress>
+
+            </div>
+
+        </div>
+
+        <div class="attack-btns">
+                <button onclick="sound()" id="diamond-sword"><img src="sword.png" alt=""></button>
+                <button onclick="sound()" id="iron-sword"><img src="iron-s.png" alt=""></button>
+                <button onclick="healSound()" id="heal"><img src="heal.png" alt=""></button>
+                <button onclick="adjustHealthBar(maxHealth)" id="reset"><img src="icon.webp" alt=""></button>
+            </div>
+
+
+            <div class="my-modal" id="my-modal">
+                <div class="image">
+                    <img class="face-status" src="win.png" alt="">
+                </div>
+
+                <h2>You Won!</h2>
+
+                <p>click the button below to keep playing</p>
+
+                <button class="okayBtn" id="okayBtn">Okay</button>
+            </div>
+
+
+            <div class="my-modal my-modal-l" id="my-modal-l">
+                <div class="image">
+                    <img class="face-status" src="lost.png" alt="">
+                </div>
+
+                <h2 class="htitle">You Lost!</h2>
+
+                <p class="ptitle">click the button below to keep playing</p>
+
+                <button class="okayBtn" id="okayBtn-l">Okay</button>
+            </div>
+
+
+            <div class="my-modal my-modal-t" id="my-modal-t">
+                <div class="image">
+                    <img class="face-status" src="skel.png" alt="">
+                </div>
+
+                <h2 class="htitle">It's a tie!</h2>
+
+                <p class="ptitle">click the button below to keep playing</p>
+
+                <button class="okayBtn" id="okayBtn-t">Okay</button>
+            </div>
+
+            <div id="overlay"></div>
+
+    </div>
+
+    
+
+    <audio id="myaudio" src="game-song.mp3"></audio>
+    
+
+
+    
+    
+    <script src="app.js"></script>
+    <script src="funcs.js"></script>
+</body>
+</html>
